@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.ComponentModel.DataAnnotations;
 
 namespace TestApp.Models
 {
     public class Buying
     {
-        public int BuyId { get; set; }
+       [Key]public int BuyId { get; set; }
 
         public string FIO { get; set; }
 
@@ -16,5 +17,7 @@ namespace TestApp.Models
         public string Addres { get; set; }
 
         public string Email { get; set; }
+
+        public int ActorId { get; set; }
     }
 }
