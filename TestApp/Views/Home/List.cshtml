@@ -1,0 +1,33 @@
+﻿@{
+    Layout = "/Views/Shared/_Layout.cshtml"; // We not using page master for page creating
+}
+
+<h3>Online Shop "Vah kakoy Cumberbatch"</h3>
+
+<br />
+<table>
+    <thead>
+        <tr>
+            <td>Name</td>
+            <td>Addres</td>
+            <td>Email</td>
+            <td>Date</td>
+            <td>ActorId</td>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (var buying in ViewBag.Buyings)
+            {
+        <tr>
+            <td>@buying.FIO</td>
+            <td>@buying.Addres</td>
+            <td>@buying.Email</td>
+            <td>@buying.DateTime</td>
+            <td>@buying.ActorId</td>
+        </tr>
+            }
+        }
+    </tbody>
+</table>
+

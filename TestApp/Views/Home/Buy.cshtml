@@ -1,44 +1,30 @@
-﻿
-@{
-    Layout = null;
+﻿@{
+    Layout = "/Views/Shared/_Layout.cshtml"; // We not using page master for page creating
 }
+<h3>Order</h3>
+<br />
 
-<!DOCTYPE html>
+<form method="post" action="">
+    <input type="hidden" name="ActorId" value="@ViewBag.Id" />
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Buy</title>
-</head>
-<body>
-    <div> 
-        <h3>Order</h3>
-        <br />
+    <table>
+        <tbody>
+            <tr>
+                <td>Your Name</td>
+                <td><input type="text" name="FIO" /></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="text" name="Email" /></td>
+            </tr>
+            <tr>
+                <td>Addres</td>
+                <td><input type="text" name="Addres" /></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Buy" /></td>
 
-        <form method="post" action="">
-            <input type="hidden" name="ActorId" value="@ViewBag.Id" />
-
-            <table>
-                <tbody>
-                    <tr>
-                        <td>Your Name</td>
-                        <td><input type="text" name="FIO" /></td>
-                    </tr>
-                    <tr>
-                        <td>Email</td>
-                        <td><input type="text" name="Email" /></td>
-                    </tr>
-                    <tr>
-                        <td>Addres</td>
-                        <td><input type="text" name="Addres" /></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2"><input type="submit" value="Buy" /></td>
-                        
-                    </tr>
-                </tbody>
-            </table>
-        </form>
-    </div>
-</body>
-</html>
+            </tr>
+        </tbody>
+    </table>
+</form>

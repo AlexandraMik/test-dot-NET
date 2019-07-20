@@ -19,6 +19,16 @@ namespace TestApp.Controllers
 
             return View();
         }
+
+        public ActionResult List()
+        {
+            IEnumerable<Buying> buyings = actorContext.Buyings; //Gat data from table Buying
+
+            ViewBag.Buyings = buyings; //Write actors in dynamic property
+
+            return View();
+        }
+
         [HttpGet]
         public ActionResult Buy(int id)
         {

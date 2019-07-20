@@ -1,19 +1,10 @@
 ﻿@{
-    Layout = null; // We not using page master for page creating
+    Layout = "/Views/Shared/_Layout.cshtml"; // We not using page master for page creating
 }
 
-<DOCTYPE html>
-  <html>
-<head>
-    <title>
-        Index
-    </title>
-</head>
-
-<body>
 <h3>Online Shop "Vah kakoy Cumberbatch"</h3>
 
-    <br />
+<br />
 <table>
     <thead>
         <tr>
@@ -24,18 +15,16 @@
         </tr>
     </thead>
     <tbody>
-        @{ 
+        @{
             foreach (var actor in ViewBag.Actors)
             {
-        <tr>
-            <td>@actor.Name</td>
-            <td>@actor.Age</td>
-            <td>@actor.Price</td>
-            <td><a href="/Home/Buy/@actor.Id">Buy</a></td>
-        </tr>
+                <tr>
+                    <td>@actor.Name</td>
+                    <td>@actor.Age</td>
+                    <td>@actor.Price</td>
+                    <td><a href="/Home/Buy/@actor.Id">Buy</a></td>
+                </tr>
             }
         }
     </tbody>
 </table>
-</body>
-</html>
